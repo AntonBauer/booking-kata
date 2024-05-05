@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingKata.Api", "Api\BookingKata.Api.csproj", "{6592905C-6784-4C6A-8BE4-88557CCC70FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingKata.Domain", "Domain\BookingKata.Domain.csproj", "{CD5D2F2C-BFB6-4149-9399-05731DA5444B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6592905C-6784-4C6A-8BE4-88557CCC70FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6592905C-6784-4C6A-8BE4-88557CCC70FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6592905C-6784-4C6A-8BE4-88557CCC70FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6592905C-6784-4C6A-8BE4-88557CCC70FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD5D2F2C-BFB6-4149-9399-05731DA5444B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD5D2F2C-BFB6-4149-9399-05731DA5444B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD5D2F2C-BFB6-4149-9399-05731DA5444B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD5D2F2C-BFB6-4149-9399-05731DA5444B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

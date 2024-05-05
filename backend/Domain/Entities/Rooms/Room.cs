@@ -2,15 +2,15 @@ using BookingKata.Domain.CommonTypes;
 
 namespace BookingKata.Domain.Entities.Rooms;
 
-public record Room : Entity<Guid>
+public abstract class Room(RoomId id, NonEmptyString name, RoomStatus status) : Entity<RoomId, Guid>(id)
 {
-  public NonEmptyString Name { get; }
+  public NonEmptyString Name => name;
 
-  private Room(RoomId id, NonEmptyString name) : base(id) => Name = name;
-
-  public static Room Create(string name)
+  public static FreeRoom Create(string name)
   {
-    var nonEmptyName = NonEmptyString.Create(name);
-    return new(RoomId.Create(Guid.NewGuid()), nonEmptyName);
+    var roomName = NonEmptyString.Create(name);
+
+    return new FreeRoom(RoomId.Create(Guid.Empty),
+                        roomName);
   }
 }

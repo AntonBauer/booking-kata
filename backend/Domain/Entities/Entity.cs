@@ -1,8 +1,6 @@
 namespace BookingKata.Domain.Entities;
 
-public abstract record Entity<TId>
+public abstract class Entity<TId, TValue>(TId id) where TId : Id<TValue>
 {
-    public Id<TId> Id { get; }
-
-    protected Entity(Id<TId> id) => Id = id;
+  public TId Id => id;
 }

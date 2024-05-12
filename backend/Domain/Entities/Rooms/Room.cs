@@ -1,16 +1,22 @@
+using System.Collections.Immutable;
+
 using BookingKata.Domain.CommonTypes;
+using BookingKata.Domain.Entities.Bookings;
 
 namespace BookingKata.Domain.Entities.Rooms;
 
-public abstract class Room(RoomId id, NonEmptyString name, RoomStatus status) : Entity<RoomId, Guid>(id)
+public sealed class Room : Entity<RoomId, Guid>
 {
-  public NonEmptyString Name => name;
+  private readonly ImmutableHashSet<Booking> _bookings = [];
 
-  public static FreeRoom Create(string name)
+  public NonEmptyString Name { get; }
+
+  private Room(RoomId id, NonEmptyString name) : base(id) =>
+    Name = name;
+
+  public static Room Create(string name)
   {
     var roomName = NonEmptyString.Create(name);
-
-    return new FreeRoom(RoomId.Create(Guid.Empty),
-                        roomName);
+    return new(RoomId.Empty, roomName);
   }
 }

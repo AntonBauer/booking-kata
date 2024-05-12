@@ -4,7 +4,7 @@ namespace BookingKata.Infrastructure.RoomServices.Administration;
 
 internal sealed class RoomAdministrationService(BookingContext _context) : IRoomAdministrationService
 {
-  public async Task<FreeRoom> Create(string name, CancellationToken cancellationToken)
+  public async Task<Room> Create(string name, CancellationToken cancellationToken)
   {
     var room = Room.Create(name);
 

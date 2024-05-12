@@ -2,7 +2,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\BookingKata.Domain.csproj" />
-    <ProjectReference Include="..\Infrastructure\BookingKata.Infrastructure.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

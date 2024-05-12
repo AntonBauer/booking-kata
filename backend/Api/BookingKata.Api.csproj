@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\BookingKata.Domain.csproj" />
+    <ProjectReference Include="..\Infrastructure.DataAccess\Infrastructure.DataAccess.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

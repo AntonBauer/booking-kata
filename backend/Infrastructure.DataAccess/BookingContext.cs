@@ -10,5 +10,6 @@ internal sealed class BookingContext(DbContextOptions<BookingContext> options) :
   public DbSet<Client> Clients => Set<Client>();
 
   protected override void OnModelCreating(ModelBuilder modelBuilder) =>
-    modelBuilder.ApplyConfigurationsFromAssembly(typeof(BookingContext).Assembly);
+    modelBuilder.ApplyConfigurationsFromAssembly(typeof(BookingContext).Assembly)
+                .HasDefaultSchema("booking");
 }
